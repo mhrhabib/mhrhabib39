@@ -19,8 +19,8 @@ class CustomGridTile extends StatelessWidget {
             ),
           ),
           footer: Container(
-            height: 60,
-            color: Colors.white.withOpacity(0.7),
+            height: 65,
+            color: Colors.white.withOpacity(0.9),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [

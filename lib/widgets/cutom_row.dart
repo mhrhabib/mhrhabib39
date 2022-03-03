@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 
 class CustomRow extends StatelessWidget {
-  const CustomRow({Key? key}) : super(key: key);
+  final String title;
+  const CustomRow({Key? key, required this.title}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        const Text(
-          "Daily Deals",
-          style: TextStyle(
+        Text(
+          title,
+          style: const TextStyle(
             fontSize: 18,
             color: Colors.black,
             fontWeight: FontWeight.w600,
