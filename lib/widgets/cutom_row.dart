@@ -11,6 +11,7 @@ class CustomRow extends StatelessWidget {
         const Text(
           "Daily Deals",
           style: TextStyle(
+            fontSize: 18,
             color: Colors.black,
             fontWeight: FontWeight.w600,
           ),
