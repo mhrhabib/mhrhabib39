@@ -9,6 +9,7 @@ class CategorisPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.white,
@@ -32,7 +33,7 @@ class CategorisPage extends StatelessWidget {
         ],
       ),
       body: SingleChildScrollView(
-        physics: BouncingScrollPhysics(),
+        physics: NeverScrollableScrollPhysics(),
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Column(
@@ -60,7 +61,7 @@ class CategorisPage extends StatelessWidget {
                   ],
                 ),
               ),
-              CustomCategoris(),
+              const CustomCategoris(),
               Container(height: 600, child: CustomProductGrid())
             ],
           ),
