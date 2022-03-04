@@ -16,6 +16,7 @@ class LandingPage extends StatelessWidget {
       backgroundColor: Colors.grey.shade100,
       body: SafeArea(
         child: SingleChildScrollView(
+          physics: BouncingScrollPhysics(),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
