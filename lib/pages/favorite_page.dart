@@ -2,22 +2,18 @@ import 'package:flutter/material.dart';
 
 import '../widgets/bottom_bar.dart';
 
-class CartPage extends StatelessWidget {
-  static const route = '/cart-page';
-  const CartPage({Key? key}) : super(key: key);
+class FavoritePage extends StatelessWidget {
+  static const route = '/favorite-page';
+  const FavoritePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
-        title: Text(
-          'Your cart',
-          style: TextStyle(color: Colors.white),
-        ),
+        title: const Text("Favorite Page"),
       ),
-      body: Center(
-        child: Text('NO item added'),
+      body: const Center(
+        child: Text('No item added yet'),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},

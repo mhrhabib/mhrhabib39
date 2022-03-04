@@ -11,6 +11,8 @@ class ProductProvider with ChangeNotifier {
     return [..._products];
   }
 
+  //favo
+
   //finding the right id for product
   Product findById(int id) {
     return _products.firstWhere((item) => item.id == id);

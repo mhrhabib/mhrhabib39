@@ -19,7 +19,7 @@ class CustomProductGrid extends StatelessWidget {
               crossAxisCount: 2,
               mainAxisSpacing: 8,
               crossAxisSpacing: 8,
-              childAspectRatio: .7,
+              childAspectRatio: .75,
             ),
             itemCount: snapshot.data.length,
             itemBuilder: (context, index) {
@@ -86,32 +86,32 @@ class CustomProductGrid extends StatelessWidget {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Icon(
+                              const Icon(
                                 Icons.star,
                                 color: Colors.amber,
                                 size: 15,
                               ),
-                              Icon(
+                              const Icon(
                                 Icons.star,
                                 color: Colors.amber,
                                 size: 15,
                               ),
-                              Icon(
+                              const Icon(
                                 Icons.star,
                                 color: Colors.amber,
                                 size: 15,
                               ),
-                              Icon(
+                              const Icon(
                                 Icons.star,
                                 color: Colors.amber,
                                 size: 15,
                               ),
-                              Icon(
+                              const Icon(
                                 Icons.star,
                                 color: Colors.amber,
                                 size: 15,
                               ),
-                              SizedBox(width: 4),
+                              const SizedBox(width: 4),
                               Text(product.rating.rate.toString()),
                             ],
                           ),

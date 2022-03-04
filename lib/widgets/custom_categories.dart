@@ -7,7 +7,7 @@ class CustomCategoris extends StatelessWidget {
   List<IconData> dummyIcons = [
     Icons.electric_bike,
     Icons.safety_divider,
-    Icons.sunny,
+    Icons.wb_sunny,
     Icons.cloud,
   ];
 

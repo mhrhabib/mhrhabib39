@@ -2,22 +2,18 @@ import 'package:flutter/material.dart';
 
 import '../widgets/bottom_bar.dart';
 
-class CartPage extends StatelessWidget {
-  static const route = '/cart-page';
-  const CartPage({Key? key}) : super(key: key);
+class ProfilePage extends StatelessWidget {
+  static const route = '/porfile-page';
+  const ProfilePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
-        title: Text(
-          'Your cart',
-          style: TextStyle(color: Colors.white),
-        ),
+        title: const Text("Profile"),
       ),
-      body: Center(
-        child: Text('NO item added'),
+      body: const Center(
+        child: Text("This is your profile page"),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},

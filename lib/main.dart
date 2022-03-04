@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:mhrhabib39/pages/categoris_page.dart';
-import 'package:mhrhabib39/pages/landing_page.dart';
-import 'package:mhrhabib39/pages/product_details_page.dart';
-import 'package:mhrhabib39/providers/product_provider.dart';
+import './pages/cart_page.dart';
+import './pages/categoris_page.dart';
+import './pages/favorite_page.dart';
+import './pages/landing_page.dart';
+import './pages/product_details_page.dart';
+import './pages/profile_page.dart';
+import './providers/product_provider.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -26,7 +29,10 @@ class MyApp extends StatelessWidget {
         routes: {
           LandingPage.route: (context) => const LandingPage(),
           CategorisPage.route: (context) => const CategorisPage(),
-          ProductDetailsPage.route: (context) => ProductDetailsPage(),
+          ProductDetailsPage.route: (context) => const ProductDetailsPage(),
+          CartPage.route: (context) => const CartPage(),
+          FavoritePage.route: (context) => const FavoritePage(),
+          ProfilePage.route: (context) => const ProfilePage(),
         },
       ),
     );

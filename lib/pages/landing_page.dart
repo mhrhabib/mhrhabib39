@@ -56,6 +56,7 @@ class LandingPage extends StatelessWidget {
         backgroundColor: const Color(0xFFF17532),
         child: const Icon(Icons.shopping_cart),
       ),
+      resizeToAvoidBottomInset: false,
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: const BottomBar(),
     );

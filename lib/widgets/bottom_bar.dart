@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:mhrhabib39/pages/categoris_page.dart';
+import 'package:mhrhabib39/pages/favorite_page.dart';
 import 'package:mhrhabib39/pages/landing_page.dart';
+import 'package:mhrhabib39/pages/profile_page.dart';
 
 class BottomBar extends StatelessWidget {
   const BottomBar({Key? key}) : super(key: key);
@@ -30,13 +32,25 @@ class BottomBar extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   IconButton(
-                      onPressed: () {
-                        Navigator.of(context)
-                            .pushReplacementNamed(LandingPage.route);
-                      },
-                      icon: Icon(Icons.home),
-                      color: Color(0xFFEF7532)),
-                  Icon(Icons.favorite, color: Color(0xFF676E79))
+                    onPressed: () {
+                      Navigator.of(context).pushReplacementNamed(
+                        LandingPage.route,
+                      );
+                    },
+                    icon: const Icon(Icons.home),
+                    color: const Color(0xFFEF7532),
+                  ),
+                  IconButton(
+                    onPressed: () {
+                      Navigator.of(context).pushReplacementNamed(
+                        FavoritePage.route,
+                      );
+                    },
+                    icon: const Icon(
+                      Icons.favorite,
+                      color: Color(0xFF676E79),
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -56,7 +70,16 @@ class BottomBar extends StatelessWidget {
                       color: Color(0xFF676E79),
                     ),
                   ),
-                  const Icon(Icons.person, color: Color(0xFF676E79))
+                  IconButton(
+                    onPressed: () {
+                      Navigator.of(context)
+                          .pushReplacementNamed(ProfilePage.route);
+                    },
+                    icon: const Icon(
+                      Icons.person,
+                      color: Color(0xFF676E79),
+                    ),
+                  ),
                 ],
               ),
             ),
