@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mhrhabib39/pages/categoris_page.dart';
 import 'package:mhrhabib39/pages/landing_page.dart';
+import 'package:mhrhabib39/pages/product_details_page.dart';
 import 'package:mhrhabib39/providers/product_provider.dart';
 import 'package:provider/provider.dart';
 
@@ -16,11 +17,17 @@ class MyApp extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (context) => ProductProvider(),
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: 'Habibur Rahman Habib',
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: const LandingPage(),
+        initialRoute: LandingPage.route,
+        routes: {
+          LandingPage.route: (context) => const LandingPage(),
+          CategorisPage.route: (context) => const CategorisPage(),
+          ProductDetailsPage.route: (context) => ProductDetailsPage(),
+        },
       ),
     );
   }

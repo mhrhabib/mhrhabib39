@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mhrhabib39/widgets/bottom_bar.dart';
 import 'package:mhrhabib39/widgets/custom_app_bar.dart';
 import 'package:mhrhabib39/widgets/custom_deals.dart';
 import 'package:mhrhabib39/widgets/custom_search_field.dart';
@@ -6,6 +7,7 @@ import 'package:mhrhabib39/widgets/cutom_row.dart';
 import 'package:mhrhabib39/widgets/popular_categoris.dart';
 
 class LandingPage extends StatelessWidget {
+  static const route = '/landing-page';
   const LandingPage({Key? key}) : super(key: key);
 
   @override
@@ -29,14 +31,15 @@ class LandingPage extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 8),
-              const Padding(
-                padding: EdgeInsets.only(left: 12, right: 12),
-                child: CustomDeals(),
+              Container(
+                height: 400,
+                padding: const EdgeInsets.only(left: 12, right: 12),
+                child: const CustomDeals(),
               ),
               const Padding(
                 padding: EdgeInsets.only(left: 12.0),
                 child: CustomRow(
-                  title: 'Popular Catergoris',
+                  title: 'Popular Catergories',
                 ),
               ),
               Container(
@@ -48,6 +51,13 @@ class LandingPage extends StatelessWidget {
           ),
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        backgroundColor: const Color(0xFFF17532),
+        child: const Icon(Icons.shopping_cart),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      bottomNavigationBar: const BottomBar(),
     );
   }
 }

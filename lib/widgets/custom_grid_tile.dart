@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class CustomGridTile extends StatelessWidget {
-  const CustomGridTile({Key? key}) : super(key: key);
-
+  final String imageUrl;
+  const CustomGridTile(this.imageUrl, {Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -14,7 +14,7 @@ class CustomGridTile extends StatelessWidget {
               topRight: Radius.circular(20),
             ),
             child: Image.network(
-              "https://picsum.photos/200/300",
+              imageUrl,
               fit: BoxFit.fill,
             ),
           ),
@@ -26,8 +26,8 @@ class CustomGridTile extends StatelessWidget {
               children: [
                 ElevatedButton.icon(
                   style: ElevatedButton.styleFrom(
-                    primary: Color.fromARGB(201, 181, 202, 238),
-                    minimumSize: Size(60, 50),
+                    primary: const Color.fromARGB(201, 181, 202, 238),
+                    minimumSize: const Size(60, 50),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),
                     ),

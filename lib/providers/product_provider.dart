@@ -11,6 +11,12 @@ class ProductProvider with ChangeNotifier {
     return [..._products];
   }
 
+  //finding the right id for product
+  Product findById(int id) {
+    return _products.firstWhere((item) => item.id == id);
+  }
+
+//for getting all products
   Future<List<Product>> getAllProducts() async {
     final allProductUrl = Uri.parse(ApiServices.baseUrl);
     final response = await http.get(allProductUrl);
@@ -20,5 +26,12 @@ class ProductProvider with ChangeNotifier {
       _products.add(Product.fromJson(product));
     }
     return _products;
+  }
+
+  Future getAllCategory() async {
+    final allCategoryUrl = Uri.parse(ApiServices.categorisUrl);
+    final response = await http.get(allCategoryUrl);
+
+    return json.decode(response.body);
   }
 }

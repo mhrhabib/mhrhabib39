@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/bottom_bar.dart';
 import '../widgets/custom_categories.dart';
 import '../widgets/custom_product_grid.dart';
 
 class CategorisPage extends StatelessWidget {
+  static const route = '/category-page';
   const CategorisPage({Key? key}) : super(key: key);
 
   @override
@@ -33,7 +35,7 @@ class CategorisPage extends StatelessWidget {
         ],
       ),
       body: SingleChildScrollView(
-        physics: NeverScrollableScrollPhysics(),
+        physics: const NeverScrollableScrollPhysics(),
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Column(
@@ -61,12 +63,19 @@ class CategorisPage extends StatelessWidget {
                   ],
                 ),
               ),
-              const CustomCategoris(),
-              Container(height: 600, child: CustomProductGrid())
+              CustomCategoris(),
+              const SizedBox(height: 600, child: CustomProductGrid())
             ],
           ),
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        backgroundColor: const Color(0xFFF17532),
+        child: const Icon(Icons.shopping_cart),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      bottomNavigationBar: const BottomBar(),
     );
   }
 }
